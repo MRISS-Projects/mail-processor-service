@@ -2,7 +2,7 @@
 
 ## Version
 
-0.1.0-SNAPSHOT - ${timestamp}
+0.1.0-SNAPSHOT - 20200914-224004
 
 ## Code Based Site
 
