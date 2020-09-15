@@ -25,6 +25,7 @@
     <properties>
         <sites.server>https://mriss-projects.github.io/mail-processor-service</sites.server>
         <source.project>mail-processor-service</source.project>
+        <jenkins.view>mail-processor-service</jenkins.view>
     </properties>
 
     <!-- Build Settings -->
