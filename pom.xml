@@ -1,10 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <!-- The Basics -->
     <groupId>com.mriss.mriss-parent.products</groupId>
     <artifactId>mail-processor-service</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.2.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <!-- <dependencies> -->
     <!-- </dependencies> -->
@@ -72,7 +72,7 @@
         <connection>scm:git:${source.code.server}/${source.project}.git</connection>
         <developerConnection>scm:git:${source.code.server}/${source.project}.git</developerConnection>
         <url>${source.code.server}/${source.project}/tree/master</url>
-        <tag>staging-0.1.0-SNAPSHOT-RC</tag>
+        <tag>HEAD</tag>
     </scm>
 <!--     <prerequisites> -->
 <!--     </prerequisites> -->
