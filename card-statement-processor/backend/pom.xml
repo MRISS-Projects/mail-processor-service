@@ -4,14 +4,14 @@
     <!-- The Basics -->
     <groupId>com.mriss.mriss-parent.products.mail-processor-service.card-statement-processor</groupId>
     <artifactId>backend</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <packaging>pom</packaging>
     <!-- <dependencies> -->
     <!-- </dependencies> -->
     <parent>
         <groupId>com.mriss.mriss-parent.products.mail-processor-service</groupId>
         <artifactId>card-statement-processor</artifactId>
-        <version>0.1.0</version>
+        <version>0.1.1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <!-- <dependencyManagement> -->
