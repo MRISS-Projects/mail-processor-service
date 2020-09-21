@@ -2,9 +2,11 @@
 
 ## Version
 
-0.2.0-SNAPSHOT - 18 - 20200921-014237
+0.2.0-SNAPSHOT - 22 - 20200921-015524
 
 ## Code Based Site
+
+x
 
 Snapshot: https://mriss-projects.github.io/mail-processor-service/snapshots/products/mail-processor-service
 
