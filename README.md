@@ -2,7 +2,7 @@
 
 ## Version
 
-0.1.0
+0.1.1
 
 ## Code Based Site
 
@@ -13,6 +13,12 @@ RCs: https://mriss-projects.github.io/mail-processor-service/rcs/products/mail-p
 Release: https://mriss-projects.github.io/mail-processor-service/releases/products/mail-processor-service
 
 ## Release Notes
+
+### Version 0.1.1
+
+| # | Type | Summary | Assignee | Reporter | Updated |
+| - | ---- | ------- | -------- | -------- | ------- |
+| [7](https://github.com/MRISS-Projects/mail-processor-service/issues/7) | task | Increase parent version | mriss | mriss | 9/20/20 |
 
 ### Version 0.1.0
 
