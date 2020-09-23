@@ -14,6 +14,12 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Filter.
+ * 
+ * @author riss
+ *
+ */
 @WebFilter("/_ah/mail/*")
 public class RequestResponseLoggingFilter implements Filter {
 
