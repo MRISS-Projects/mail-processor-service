@@ -28,7 +28,7 @@
     <!-- </reporting> -->
 
     <!-- More Project Information -->
-    <name>Clock In Processor Service</name>
+    <name>Clock In Processor Backend Service</name>
     <description>
         Clock in processor service. It receives objects from app, proceed calculation and put at FireStore.
     </description>

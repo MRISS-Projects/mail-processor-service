@@ -1,13 +1,17 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <!-- The Basics -->
     <groupId>com.mriss.mriss-parent.products.mail-processor-service.clock-in-processor.backend</groupId>
-    <artifactId>app</artifactId>
-    <version>0.2.0-SNAPSHOT</version>
+    <artifactId>clockin-backend-app</artifactId>
     <packaging>jar</packaging>
-    <!-- <dependencies> -->
-    <!-- </dependencies> -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
     <parent>
         <groupId>com.mriss.mriss-parent.products.mail-processor-service.clock-in-processor</groupId>
         <artifactId>backend</artifactId>
@@ -16,10 +20,10 @@
     </parent>
     <!-- <dependencyManagement> -->
     <!-- </dependencyManagement> -->
-<!--     <modules> -->
-<!--     </modules> -->
-<!--     <properties> -->
-<!--     </properties> -->
+    <!-- <modules> -->
+    <!-- </modules> -->
+    <!-- <properties> -->
+    <!-- </properties> -->
 
     <!-- Build Settings -->
     <!-- <build> -->
@@ -28,39 +32,62 @@
     <!-- </reporting> -->
 
     <!-- More Project Information -->
-    <name>Clock In Processor Backend</name>
+    <name>Clock In Processor Backend App</name>
     <description>
         Clock in processor backend application. It uses a core API to parse emails and return a graph of objects 
         used to call the service.
     </description>
-<!--     <url></url> -->
-<!--     <inceptionYear></inceptionYear> -->
-<!--     <licenses> -->
-<!--     </licenses> -->
-<!--     <organization> -->
-<!--     </organization> -->
-<!--     <developers> -->
-<!--     </developers> -->
-<!--     <contributors> -->
-<!--     </contributors> -->
+    <!-- <url></url> -->
+    <!-- <inceptionYear></inceptionYear> -->
+    <!-- <licenses> -->
+    <!-- </licenses> -->
+    <!-- <organization> -->
+    <!-- </organization> -->
+    <!-- <developers> -->
+    <!-- </developers> -->
+    <!-- <contributors> -->
+    <!-- </contributors> -->
 
     <!-- Environment Settings -->
-<!--     <issueManagement> -->
-<!--     </issueManagement> -->
-<!--     <ciManagement> -->
-<!--     </ciManagement> -->
-<!--     <mailingLists> -->
-<!--     </mailingLists> -->
-<!--     <scm> -->
-<!--     </scm> -->
-<!--     <prerequisites> -->
-<!--     </prerequisites> -->
-<!--     <repositories> -->
-<!--     </repositories> -->
-<!--     <pluginRepositories> -->
-<!--     </pluginRepositories> -->
-<!--     <distributionManagement> -->
-<!--     </distributionManagement> -->
-<!--     <profiles> -->
-<!--     </profiles> -->
+    <!-- <issueManagement> -->
+    <!-- </issueManagement> -->
+    <!-- <ciManagement> -->
+    <!-- </ciManagement> -->
+    <!-- <mailingLists> -->
+    <!-- </mailingLists> -->
+    <!-- <scm> -->
+    <!-- </scm> -->
+    <!-- <prerequisites> -->
+    <!-- </prerequisites> -->
+    <!-- <repositories> -->
+    <!-- </repositories> -->
+    <!-- <pluginRepositories> -->
+    <!-- </pluginRepositories> -->
+    <!-- <distributionManagement> -->
+    <!-- </distributionManagement> -->
+    <profiles>
+        <profile>
+            <id>deployment</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.google.cloud.tools</groupId>
+                        <artifactId>appengine-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>deploy-to-appengine</id>
+                                <phase>deploy</phase>
+                                <goals>
+                                    <goal>deploy</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
