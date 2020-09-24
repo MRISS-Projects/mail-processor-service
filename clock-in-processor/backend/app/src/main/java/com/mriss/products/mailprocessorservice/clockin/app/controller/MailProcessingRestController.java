@@ -8,22 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mriss.products.mailprocessorservice.clockin.app.config.RequestResponseLoggingFilter;
-
 @RestController
 public class MailProcessingRestController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(RequestResponseLoggingFilter.class);
-
-    @GetMapping("/_ah/mail")
-    public void getMethod(HttpServletRequest request) {
-        LOGGER.info("Get method.");
-    }
-
-    @PostMapping("/_ah/mail")
-    public void postMethod(HttpServletRequest request) {
-        LOGGER.info("Post method.");
-    }
+    private static final Logger LOGGER = LoggerFactory.getLogger(MailProcessingRestController.class);
 
     @GetMapping("/test")
     public void testGetMethod(HttpServletRequest request) {
@@ -35,4 +23,8 @@ public class MailProcessingRestController {
         LOGGER.info("Test Post method.");
     }
 
+    @GetMapping("/_ah/warmup")
+    public void warmUp(HttpServletRequest request) {
+        LOGGER.info("Warming up...");
+    }
 }
