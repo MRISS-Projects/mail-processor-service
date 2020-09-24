@@ -22,12 +22,17 @@ public class MailProcessingRestController {
 
     @PostMapping("/_ah/mail")
     public void postMethod(HttpServletRequest request) {
-        LOGGER.info("Posts method.");
+        LOGGER.info("Post method.");
     }
 
     @GetMapping("/test")
     public void testGetMethod(HttpServletRequest request) {
         LOGGER.info("Test Get method.");
+    }
+
+    @PostMapping("/test")
+    public void testPostMethod(HttpServletRequest request) {
+        LOGGER.info("Test Post method.");
     }
 
 }
