@@ -30,9 +30,4 @@ public class MailProcessingRestController {
         LOGGER.info("Test Get method.");
     }
 
-    @PostMapping("/test")
-    public void testPostMethod(HttpServletRequest request) {
-        LOGGER.info("Test Post method.");
-    }
-
 }
