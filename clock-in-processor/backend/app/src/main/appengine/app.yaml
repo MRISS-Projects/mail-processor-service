@@ -3,3 +3,4 @@ instance_class: F1
 inbound_services:
   - mail
   - warmup
+service: clockin-backend-app
