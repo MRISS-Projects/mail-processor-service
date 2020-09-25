@@ -2,7 +2,7 @@
 
 ## Version
 
-0.2.0-SNAPSHOT - 50 - 20200924-051324
+0.2.0-SNAPSHOT - 52 - 20200925-034948
 
 ## Code Based Site
 
@@ -13,6 +13,12 @@ RCs: https://mriss-projects.github.io/mail-processor-service/rcs/products/mail-p
 Release: https://mriss-projects.github.io/mail-processor-service/releases/products/mail-processor-service
 
 ## Release Notes
+
+### Version 0.2.0-SNAPSHOT
+
+| # | Type | Summary | Assignee | Reporter | Updated |
+| - | ---- | ------- | -------- | -------- | ------- |
+| [5](https://github.com/MRISS-Projects/mail-processor-service/issues/5) | task | Clock in backend app initial conversion to java 11. | mriss | mriss | 9/25/20 |
 
 ### Version 0.1.1
 
