@@ -25,6 +25,7 @@
         <sites.server>https://mriss-projects.github.io/mail-processor-service</sites.server>
         <source.project>mail-processor-service</source.project>
         <jenkins.view>mail-processor-service</jenkins.view>
+        <appengine.project.id>${google.appengine.project}</appengine.project.id>
     </properties>
 
     <!-- Build Settings -->
@@ -107,10 +108,6 @@
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
-            <properties>
-                <appengine.project.version>${project.version}-${jenkins.build.number}-${timestamp}</appengine.project.version>
-                <appengine.project.id>${google.appengine.project}</appengine.project.id>
-            </properties>
             <build>
                 <plugins>
                     <plugin>
