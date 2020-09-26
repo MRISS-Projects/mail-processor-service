@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ValidatorService {
+public class Validator {
 
     @Value("${ALLOWED_ACCOUNT}")
     private String allowedAccount;

@@ -65,7 +65,7 @@ public class MailInfoExtractor {
                 LOGGER.info("Multipart count: " + multipart.getCount());
                 for (int i = 0; i < multipart.getCount(); i++) {
                     BodyPart bodyPart = multipart.getBodyPart(i);
-                    if (bodyPart != null) {
+                    if (bodyPart != null && isValid(bodyPart)) {
                         return bodyPart.getInputStream();
                     }
                 }
@@ -75,6 +75,11 @@ public class MailInfoExtractor {
             return null;
         }
         return content;
+    }
+
+    private boolean isValid(BodyPart bodyPart) {
+        // TODO Auto-generated method stub
+        return false;
     }
 
     protected void getMessageFromRequest() throws ServletException {

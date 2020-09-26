@@ -28,7 +28,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
 import com.mriss.products.mailprocessorservice.clockin.app.service.MailInfoExtractor;
-import com.mriss.products.mailprocessorservice.clockin.app.service.ValidatorService;
+import com.mriss.products.mailprocessorservice.clockin.app.service.Validator;
 
 /**
  * Filter.
@@ -42,7 +42,7 @@ public class RequestResponseLoggingFilter implements Filter {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestResponseLoggingFilter.class);
 
     @Autowired
-    ValidatorService validator;
+    Validator validator;
 
     @Autowired
     MailInfoExtractor mailInfoExtractor;
