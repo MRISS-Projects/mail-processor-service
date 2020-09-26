@@ -36,6 +36,22 @@
 
     <!-- Build Settings -->
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                </includes>
+            </resource>
+            <resource>
+               <directory>src/main/appengine</directory>
+               <includes>
+                    <include>*.yaml</include>
+               </includes>
+               <targetPath>${project.build.directory}/appengine</targetPath>
+               <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

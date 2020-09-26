@@ -5,7 +5,7 @@
 1. Include the following at user `settings.xml`, or add `properties`  and `repositories`  sections in a default
    profile, if it already exists.
 
-```
+```xml
 <profile>
     <id>development</id>
     <activation>

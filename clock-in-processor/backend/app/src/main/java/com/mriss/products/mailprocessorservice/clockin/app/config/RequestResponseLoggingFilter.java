@@ -23,6 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 
 /**
  * Filter.
@@ -35,10 +36,18 @@ public class RequestResponseLoggingFilter implements Filter {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestResponseLoggingFilter.class);
 
+    @Value("${ALLOWED_ACCOUNT}")
+    private String allowedAccount;
+
+    @Value("${ALLOWED_SENDER_LIST}")
+    private String allowedSenderList;
+
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
         LOGGER.info("Entering filter...");
+        LOGGER.info("allowedAccount: " + allowedAccount);
+        LOGGER.info("allowedSenderList: " + allowedSenderList);
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
         LOGGER.info("Logging Request  {} : {}", req.getMethod(), req.getRequestURI());
@@ -48,15 +57,17 @@ public class RequestResponseLoggingFilter implements Filter {
         try {
             LOGGER.info("Message subject: " + msg.getSubject());
             LOGGER.info("Message subject: " + msg.getContent());
-            Multipart multipart = (Multipart) msg.getContent();
-            LOGGER.info("Multipart count: " + multipart.getCount());
-            for (int i = 0; i < multipart.getCount(); i++) {
-                BodyPart bodyPart = multipart.getBodyPart(i);
-                if (bodyPart != null) {
-                    try (InputStream is = bodyPart.getInputStream(); StringWriter sw = new StringWriter()) {
-                        IOUtils.copy(is, sw, StandardCharsets.UTF_8);
-                        StringBuffer buffer = sw.getBuffer();
-                        LOGGER.info("Content: " + buffer.toString());
+            if (msg.getContent() instanceof Multipart) {
+                Multipart multipart = (Multipart) msg.getContent();
+                LOGGER.info("Multipart count: " + multipart.getCount());
+                for (int i = 0; i < multipart.getCount(); i++) {
+                    BodyPart bodyPart = multipart.getBodyPart(i);
+                    if (bodyPart != null) {
+                        try (InputStream is = bodyPart.getInputStream(); StringWriter sw = new StringWriter()) {
+                            IOUtils.copy(is, sw, StandardCharsets.UTF_8);
+                            StringBuffer buffer = sw.getBuffer();
+                            LOGGER.info("Content: " + buffer.toString());
+                        }
                     }
                 }
             }
