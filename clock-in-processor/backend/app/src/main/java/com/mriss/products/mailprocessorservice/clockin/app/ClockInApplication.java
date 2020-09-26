@@ -10,7 +10,8 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
  * @author mriss
  *
  */
-@SpringBootApplication(scanBasePackages = { "com.mriss.products.mailprocessorservice.clockin.app.controller" })
+@SpringBootApplication(scanBasePackages = { "com.mriss.products.mailprocessorservice.clockin.app.controller",
+        "com.mriss.products.mailprocessorservice.clockin.app.service" })
 @ServletComponentScan(basePackages = { "com.mriss.products.mailprocessorservice.clockin.app.config" })
 public class ClockInApplication {
     public static void main(String[] args) {
