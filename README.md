@@ -2,7 +2,7 @@
 
 ## Version
 
-0.2.0-SNAPSHOT - 52 - 20200925-035132
+0.2.0-SNAPSHOT - 53 - 20200927-025918
 
 ## Code Based Site
 
@@ -18,6 +18,7 @@ Release: https://mriss-projects.github.io/mail-processor-service/releases/produc
 
 | # | Type | Summary | Assignee | Reporter | Updated |
 | - | ---- | ------- | -------- | -------- | ------- |
+| [9](https://github.com/MRISS-Projects/mail-processor-service/issues/9) | task | Create compatible appengine version number | mriss | mriss | 9/25/20 |
 | [5](https://github.com/MRISS-Projects/mail-processor-service/issues/5) | task | Clock in backend app initial conversion to java 11. | mriss | mriss | 9/25/20 |
 
 ### Version 0.1.1
