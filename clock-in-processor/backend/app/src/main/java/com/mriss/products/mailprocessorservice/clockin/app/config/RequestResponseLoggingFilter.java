@@ -40,22 +40,26 @@ public class RequestResponseLoggingFilter implements Filter {
             throws IOException, ServletException {
         LOGGER.info("Entering filter...");
         HttpServletRequest req = (HttpServletRequest) request;
-        assert mailInfoExtractor.setRequest(req);
-        LOGGER.info("Logging Request  {} : {}", req.getMethod(), req.getRequestURI());
-        if (validator.validate(req.getRequestURI(), mailInfoExtractor.getFrom())) {
-            if (processEmail(mailInfoExtractor.getContent())) {
-                return;
+        if (mailInfoExtractor.setRequest(req)) {
+            LOGGER.info("Logging Request  {} : {}", req.getMethod(), req.getRequestURI());
+            if (validator.validate(req.getRequestURI(), mailInfoExtractor.getFrom())) {
+                if (processEmail(mailInfoExtractor.getContent())) {
+                    return;
+                } else {
+                    LOGGER.error("Invalid message processing!!!");
+                }
             } else {
-                LOGGER.error("Invalid message processing!!!");
+                LOGGER.warn("Invalid message!!!");
             }
-        } else {
-            LOGGER.warn("Invalid message!!!");
         }
         chain.doFilter(request, response);
     }
 
     private boolean processEmail(InputStream content) {
-        if (content == null) return false;
+        if (content == null) {
+            return false;
+        }
+        LOGGER.info("Success processing message!!!");
         return true;
     }
 
