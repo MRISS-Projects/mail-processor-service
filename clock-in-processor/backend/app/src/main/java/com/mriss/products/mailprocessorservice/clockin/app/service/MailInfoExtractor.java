@@ -28,7 +28,6 @@ public class MailInfoExtractor {
 
     private HttpServletRequest request;
     private MimeMessage message;
-
     private InputStream content;
 
     public boolean setRequest(HttpServletRequest request) {
