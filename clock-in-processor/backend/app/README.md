@@ -12,6 +12,13 @@
         <activeByDefault>true</activeByDefault>
     </activation>
     <properties>
+        <!-- email account name (the name before @) allowed to submit mail messages -->
+        <allowed.account>[MY_ALLOWED_ACCOUNT]</allowed.account>
+
+        <!-- comma separated list of full email addresses allowed as senders -->
+        <allowed.sender.list>[ALLOWED_SENDERS_LIST]</allowed.sender.list>
+
+        <!-- google cloud project id -->
         <google.appengine.project>[GCLOUD_PROJECT_ID]</google.appengine.project>
     </properties>
     <repositories>

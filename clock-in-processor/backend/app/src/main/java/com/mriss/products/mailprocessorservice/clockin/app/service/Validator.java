@@ -1,5 +1,6 @@
 package com.mriss.products.mailprocessorservice.clockin.app.service;
 
+import java.util.Iterator;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -30,6 +31,8 @@ public class Validator {
 
     private Pattern pattern;
 
+    private String[] allowedSendersArray;
+
     public Validator() {
     }
 
@@ -39,11 +42,29 @@ public class Validator {
         this.pattern = Pattern.compile(sb.append("(").append(allowedAccount).append(")").append("@").append("(")
                 .append(serviceName).append(")").append("(\\-dot\\-)").append("(").append(projectId).append(")")
                 .append("(").append("\\.appspotmail\\.com").append(")").toString());
+        if (allowedSenderList.indexOf(",") != -1) {
+            this.allowedSendersArray = allowedSenderList.split(",");
+        } else {
+            allowedSendersArray = new String[1];
+            allowedSendersArray[0] = allowedSenderList;
+        }
     }
 
     public boolean validate(String requestURI, Set<String> set) {
         Matcher m = pattern.matcher(requestURI);
-        return m.matches();
+        return m.matches() && areSendersInSendersList(set);
+    }
+
+    private boolean areSendersInSendersList(Set<String> set) {
+        for (Iterator<String> iterator = set.iterator(); iterator.hasNext();) {
+            String from = (String) iterator.next();
+            for (int i = 0; i < allowedSendersArray.length; i++) {
+                if (from.indexOf(allowedSendersArray[i]) != -1) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
 }
