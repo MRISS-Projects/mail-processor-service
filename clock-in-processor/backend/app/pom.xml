@@ -48,6 +48,12 @@
                 </includes>
             </resource>
             <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.eml</include>
+                </includes>
+            </resource>
+            <resource>
                 <directory>src/main/appengine</directory>
                 <includes>
                     <include>*.yaml</include>

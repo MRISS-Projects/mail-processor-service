@@ -24,7 +24,7 @@ import org.springframework.web.context.annotation.RequestScope;
 @RequestScope
 public class MailInfoExtractor {
 
-    private static final String MIME_MESSAGE_ATTRIBUTE = "mimeMessage";
+    public static final String MIME_MESSAGE_ATTRIBUTE = "mimeMessage";
 
     private static final String VALID_CONTENT_TYPE = "text/html";
 
