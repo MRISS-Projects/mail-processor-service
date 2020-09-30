@@ -10,13 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest(properties = {"ALLOWED_SENDER_LIST=myemail@foo.bar.com,myemail1@foo.bar.com"})
-class ValidatorTest2 {
+public class ValidatorTest2 {
 
     @Autowired
     Validator validator;
 
     @Test
-    void testValidateOk() {
+    public void testValidateOk() {
         Set<String> set = new HashSet<String>();
         set.add("myemail1@foo.bar.com");
         assertTrue(validator.validate("/_ah/mail/myfakeaccount@my-service-name-dot-my-project-id.appspotmail.com",

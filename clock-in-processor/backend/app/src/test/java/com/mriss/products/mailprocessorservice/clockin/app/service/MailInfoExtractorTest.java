@@ -22,6 +22,7 @@ import javax.mail.internet.MimeMessage;
 import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mock.web.MockHttpServletRequest;
 
 @SpringBootTest
-class MailInfoExtractorTest {
+public class MailInfoExtractorTest {
 
     @Autowired
     MailInfoExtractor extractor;
@@ -38,7 +39,8 @@ class MailInfoExtractorTest {
 
     private MockHttpServletRequest request;
 
-    public void setup() throws MessagingException, FileNotFoundException {
+    @BeforeEach
+    public void setUp() throws MessagingException, FileNotFoundException {
         request = new MockHttpServletRequest();
         Properties props = new Properties();
         Session session = Session.getDefaultInstance(props, null);
@@ -48,8 +50,7 @@ class MailInfoExtractorTest {
     }
 
     @Test
-    void testGetFrom() throws MessagingException, FileNotFoundException {
-        setup();
+    public void testGetFrom() throws MessagingException, FileNotFoundException {
         extractor.setRequest(request);
         Set<String> from = extractor.getFrom();
         assertNotNull(from);
@@ -57,8 +58,7 @@ class MailInfoExtractorTest {
     }
 
     @Test
-    void testGetFromException() throws MessagingException, FileNotFoundException {
-        setup();
+    public void testGetFromException() throws MessagingException, FileNotFoundException {
         HttpServletRequest mockRequest = Mockito.mock(HttpServletRequest.class);
         MimeMessage mockMessage = Mockito.mock(MimeMessage.class);
         Mockito.when(mockRequest.getAttribute(Mockito.anyString())).thenReturn(mockMessage);
@@ -69,15 +69,13 @@ class MailInfoExtractorTest {
     }
 
     @Test
-    void testGetFromNull() throws MessagingException, FileNotFoundException {
-        setup();
+    public void testGetFromNull() throws MessagingException, FileNotFoundException {
         Set<String> from = extractor.getFrom();
         assertNull(from);
     }
 
     @Test
-    void testGetContent() throws MessagingException, IOException {
-        setup();
+    public void testGetContent() throws MessagingException, IOException {
         MimeMessage messageSpy = Mockito.spy(message);
         HttpServletRequest requestSpy = Mockito.spy(request);
         Mockito.when(requestSpy.getAttribute(MailInfoExtractor.MIME_MESSAGE_ATTRIBUTE)).thenReturn(messageSpy);
@@ -94,8 +92,7 @@ class MailInfoExtractorTest {
     }
 
     @Test
-    void testGetContentException() throws MessagingException, IOException {
-        setup();
+    public void testGetContentException() throws MessagingException, IOException {
         MimeMessage messageSpy = Mockito.mock(MimeMessage.class);
         HttpServletRequest requestSpy = Mockito.mock(HttpServletRequest.class);
         Mockito.when(requestSpy.getAttribute(MailInfoExtractor.MIME_MESSAGE_ATTRIBUTE)).thenReturn(messageSpy);
@@ -105,8 +102,7 @@ class MailInfoExtractorTest {
     }
 
     @Test
-    void testGetContentTypeException() throws MessagingException, IOException {
-        setup();
+    public void testGetContentTypeException() throws MessagingException, IOException {
         MimeMessage messageSpy = Mockito.spy(message);
         HttpServletRequest requestSpy = Mockito.spy(request);
         Mockito.when(requestSpy.getAttribute(MailInfoExtractor.MIME_MESSAGE_ATTRIBUTE)).thenReturn(messageSpy);
@@ -121,16 +117,14 @@ class MailInfoExtractorTest {
     }
 
     @Test
-    void testSetRequestException() throws MessagingException, IOException {
-        setup();
+    public void testSetRequestException() throws MessagingException, IOException {
         HttpServletRequest mockRequest = Mockito.mock(HttpServletRequest.class);
         Mockito.doThrow(IOException.class).when(mockRequest).getInputStream();
         assertFalse(extractor.setRequest(mockRequest));
     }
 
     @Test
-    void testSetRequestNoMessage() throws MessagingException, IOException {
-        setup();
+    public void testSetRequestNoMessage() throws MessagingException, IOException {
         HttpServletRequest mockRequest = Mockito.mock(HttpServletRequest.class);
         ServletInputStream mockedInputStream = Mockito.mock(ServletInputStream.class);
         Mockito.when(mockRequest.getAttribute(Mockito.anyString())).thenReturn(null);

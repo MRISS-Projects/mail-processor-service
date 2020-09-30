@@ -11,13 +11,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ValidatorTest {
+public class ValidatorTest {
 
     @Autowired
     Validator validator;
 
     @Test
-    void testValidateOk() {
+    public void testValidateOk() {
         Set<String> set = new HashSet<String>();
         set.add("myemail@foo.bar.com");
         assertTrue(validator.validate("/_ah/mail/myfakeaccount@my-service-name-dot-my-project-id.appspotmail.com",
@@ -25,7 +25,7 @@ class ValidatorTest {
     }
 
     @Test
-    void testValidateOkInvalidEmail() {
+    public void testValidateOkInvalidEmail() {
         Set<String> set = new HashSet<String>();
         set.add("email@test.com");
         assertFalse(validator.validate("/_ah/mail/myfakeaccount@my-service-name-dot-my-project-id.appspotmail.com",
@@ -33,7 +33,7 @@ class ValidatorTest {
     }
 
     @Test
-    void testValidateInvalid() {
+    public void testValidateInvalid() {
         Set<String> set = new HashSet<String>();
         set.add("email@test.com");
         assertFalse(validator.validate("/_ah/mail/otheraccount@my-service-name-dot-my-project-id.appspotmail.com",
