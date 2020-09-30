@@ -68,7 +68,6 @@ public class MailInfoExtractor {
                 LOGGER.info("Multipart count: " + multipart.getCount());
                 for (int i = 0; i < multipart.getCount(); i++) {
                     BodyPart bodyPart = multipart.getBodyPart(i);
-                    LOGGER.info("bodyPart: " + bodyPart.getContentType());
                     if (bodyPart != null && isValid(bodyPart)) {
                         content = bodyPart.getInputStream();
                     }
@@ -83,6 +82,7 @@ public class MailInfoExtractor {
 
     private boolean isValid(BodyPart bodyPart) {
         try {
+            LOGGER.info("bodyPart: " + bodyPart.getContentType());
             return bodyPart.getContentType().indexOf(VALID_CONTENT_TYPE) != -1;
         } catch (MessagingException e) {
             LOGGER.error(e.getMessage(), e);
