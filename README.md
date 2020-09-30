@@ -2,7 +2,7 @@
 
 ## Version
 
-0.2.0-SNAPSHOT - 71 - 20200930-030535
+0.2.0-SNAPSHOT - 72 - 20200930-032226
 
 ## Code Based Site
 
