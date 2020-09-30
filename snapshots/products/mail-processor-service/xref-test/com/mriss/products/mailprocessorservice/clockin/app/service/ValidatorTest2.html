@@ -18,13 +18,13 @@
 <a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> org.springframework.boot.test.context.SpringBootTest;
 <a class="jxr_linenumber" name="L11" href="#L11">11</a>  
 <a class="jxr_linenumber" name="L12" href="#L12">12</a>  @SpringBootTest(properties = {<span class="jxr_string">"ALLOWED_SENDER_LIST=myemail@foo.bar.com,myemail1@foo.bar.com"</span>})
-<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">class</strong> ValidatorTest2 {
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> ValidatorTest2 {
 <a class="jxr_linenumber" name="L14" href="#L14">14</a>  
 <a class="jxr_linenumber" name="L15" href="#L15">15</a>      @Autowired
 <a class="jxr_linenumber" name="L16" href="#L16">16</a>      Validator validator;
 <a class="jxr_linenumber" name="L17" href="#L17">17</a>  
 <a class="jxr_linenumber" name="L18" href="#L18">18</a>      @Test
-<a class="jxr_linenumber" name="L19" href="#L19">19</a>      <strong class="jxr_keyword">void</strong> testValidateOk() {
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testValidateOk() {
 <a class="jxr_linenumber" name="L20" href="#L20">20</a>          Set&lt;String&gt; set = <strong class="jxr_keyword">new</strong> HashSet&lt;String&gt;();
 <a class="jxr_linenumber" name="L21" href="#L21">21</a>          set.add(<span class="jxr_string">"myemail1@foo.bar.com"</span>);
 <a class="jxr_linenumber" name="L22" href="#L22">22</a>          assertTrue(validator.validate(<span class="jxr_string">"/_ah/mail/myfakeaccount@my-service-name-dot-my-project-id.appspotmail.com"</span>,

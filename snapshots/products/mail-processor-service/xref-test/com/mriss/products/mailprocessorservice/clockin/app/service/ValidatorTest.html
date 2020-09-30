@@ -19,13 +19,13 @@
 <a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> org.springframework.boot.test.context.SpringBootTest;
 <a class="jxr_linenumber" name="L12" href="#L12">12</a>  
 <a class="jxr_linenumber" name="L13" href="#L13">13</a>  @SpringBootTest
-<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">class</strong> <a name="ValidatorTest" href="../../../../../../../com/mriss/products/mailprocessorservice/clockin/app/service/ValidatorTest.html#ValidatorTest">ValidatorTest</a> {
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="ValidatorTest" href="../../../../../../../com/mriss/products/mailprocessorservice/clockin/app/service/ValidatorTest.html#ValidatorTest">ValidatorTest</a> {
 <a class="jxr_linenumber" name="L15" href="#L15">15</a>  
 <a class="jxr_linenumber" name="L16" href="#L16">16</a>      @Autowired
 <a class="jxr_linenumber" name="L17" href="#L17">17</a>      Validator validator;
 <a class="jxr_linenumber" name="L18" href="#L18">18</a>  
 <a class="jxr_linenumber" name="L19" href="#L19">19</a>      @Test
-<a class="jxr_linenumber" name="L20" href="#L20">20</a>      <strong class="jxr_keyword">void</strong> testValidateOk() {
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testValidateOk() {
 <a class="jxr_linenumber" name="L21" href="#L21">21</a>          Set&lt;String&gt; set = <strong class="jxr_keyword">new</strong> HashSet&lt;String&gt;();
 <a class="jxr_linenumber" name="L22" href="#L22">22</a>          set.add(<span class="jxr_string">"myemail@foo.bar.com"</span>);
 <a class="jxr_linenumber" name="L23" href="#L23">23</a>          assertTrue(validator.validate(<span class="jxr_string">"/_ah/mail/myfakeaccount@my-service-name-dot-my-project-id.appspotmail.com"</span>,
@@ -33,7 +33,7 @@
 <a class="jxr_linenumber" name="L25" href="#L25">25</a>      }
 <a class="jxr_linenumber" name="L26" href="#L26">26</a>  
 <a class="jxr_linenumber" name="L27" href="#L27">27</a>      @Test
-<a class="jxr_linenumber" name="L28" href="#L28">28</a>      <strong class="jxr_keyword">void</strong> testValidateOkInvalidEmail() {
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testValidateOkInvalidEmail() {
 <a class="jxr_linenumber" name="L29" href="#L29">29</a>          Set&lt;String&gt; set = <strong class="jxr_keyword">new</strong> HashSet&lt;String&gt;();
 <a class="jxr_linenumber" name="L30" href="#L30">30</a>          set.add(<span class="jxr_string">"email@test.com"</span>);
 <a class="jxr_linenumber" name="L31" href="#L31">31</a>          assertFalse(validator.validate(<span class="jxr_string">"/_ah/mail/myfakeaccount@my-service-name-dot-my-project-id.appspotmail.com"</span>,
@@ -41,7 +41,7 @@
 <a class="jxr_linenumber" name="L33" href="#L33">33</a>      }
 <a class="jxr_linenumber" name="L34" href="#L34">34</a>  
 <a class="jxr_linenumber" name="L35" href="#L35">35</a>      @Test
-<a class="jxr_linenumber" name="L36" href="#L36">36</a>      <strong class="jxr_keyword">void</strong> testValidateInvalid() {
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testValidateInvalid() {
 <a class="jxr_linenumber" name="L37" href="#L37">37</a>          Set&lt;String&gt; set = <strong class="jxr_keyword">new</strong> HashSet&lt;String&gt;();
 <a class="jxr_linenumber" name="L38" href="#L38">38</a>          set.add(<span class="jxr_string">"email@test.com"</span>);
 <a class="jxr_linenumber" name="L39" href="#L39">39</a>          assertFalse(validator.validate(<span class="jxr_string">"/_ah/mail/otheraccount@my-service-name-dot-my-project-id.appspotmail.com"</span>,
