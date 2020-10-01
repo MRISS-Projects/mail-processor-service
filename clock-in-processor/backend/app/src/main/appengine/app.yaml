@@ -6,7 +6,7 @@ inbound_services:
   - mail
   - warmup
 
-service: clockin-backend-app
+service: "@service.name@"
 
 env_variables:
   ALLOWED_ACCOUNT: "@allowed.account@"
