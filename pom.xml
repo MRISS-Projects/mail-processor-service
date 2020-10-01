@@ -103,8 +103,8 @@
     <!-- <inceptionYear></inceptionYear> -->
     <licenses>
         <license>
-            <name>APACHE LICENSE, VERSION 2.0¶</name>
-            <url>https://opensource.org/licenses/Apache-2.0</url>
+            <name>APACHE LICENSE, VERSION 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
     <!-- <organization> -->
