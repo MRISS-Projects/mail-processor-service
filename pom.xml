@@ -86,8 +86,12 @@
     <description>A project to parse and process mail messages through a service-oriented approach.</description>
     <!-- <url></url> -->
     <!-- <inceptionYear></inceptionYear> -->
-    <!-- <licenses> -->
-    <!-- </licenses> -->
+    <licenses>
+        <license>
+            <name>APACHE LICENSE, VERSION 2.0¶</name>
+            <url>https://opensource.org/licenses/Apache-2.0</url>
+        </license>
+    </licenses>
     <!-- <organization> -->
     <!-- </organization> -->
     <!-- <developers> -->
