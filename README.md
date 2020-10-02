@@ -1,8 +1,10 @@
 # Mail Processor Service
 
+[![Build Status](https://34.70.246.135/jenkins/buildStatus/icon?job=MailProcessingService-Snapshot)](https://34.70.246.135/jenkins/job/MailProcessingService-Snapshot/)
+
 ## Version
 
-0.3.0-SNAPSHOT - 126 - 20201002-185951
+0.3.0-SNAPSHOT - 128 - 20201002-191631
 
 ## Code Based Site
 
