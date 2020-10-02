@@ -1,5 +1,7 @@
 # Mail Processor Service
 
+[![Build Status](https://34.70.246.135/jenkins/buildStatus/icon?job=MailProcessingService-Snapshot)](https://34.70.246.135/jenkins/job/MailProcessingService-Snapshot/)
+
 ## Version
 
 ${project.build.version}
