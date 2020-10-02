@@ -15,4 +15,4 @@
 # limitations under the License.
 #*******************************************************************************
 
-mvn --batch-mode -DdevelopmentVersion=$1 -DautoVersionSubmodules=true release:update-versions
+mvn --batch-mode -Dproject.dev.com.mriss.mriss-parent.products:mail-processor-service=$1 -DautoVersionSubmodules=true release:update-versions
