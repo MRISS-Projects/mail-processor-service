@@ -26,7 +26,7 @@
     <parent>
         <groupId>com.mriss.mriss-parent</groupId>
         <artifactId>products</artifactId>
-        <version>3.6.0</version>
+        <version>3.6.1</version>
     </parent>
     <!-- <dependencyManagement> -->
     <!-- </dependencyManagement> -->
