@@ -31,6 +31,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import com.mriss.products.mailprocessorservice.clockin.app.service.MailInfoExtractor;
+import com.mriss.products.mailprocessorservice.clockin.app.service.MailInfoExtractorFactory;
 import com.mriss.products.mailprocessorservice.clockin.app.service.Validator;
 
 public class RequestResponseLoggingFilterTest {
@@ -39,7 +40,7 @@ public class RequestResponseLoggingFilterTest {
     Validator validator;
 
     @Mock
-    MailInfoExtractor mailInfoExtractor;
+    MailInfoExtractorFactory mailInfoExtractorFactory;
 
     @InjectMocks
     RequestResponseLoggingFilter filter = new RequestResponseLoggingFilter();
@@ -63,6 +64,8 @@ public class RequestResponseLoggingFilterTest {
         FilterChain chain = Mockito.mock(FilterChain.class);
         Set<String> mockSet = Mockito.mock(Set.class);
         InputStream mockStream = Mockito.mock(InputStream.class);
+        MailInfoExtractor mailInfoExtractor = Mockito.mock(MailInfoExtractor.class);
+        Mockito.when(mailInfoExtractorFactory.getExtractor()).thenReturn(mailInfoExtractor);
         Mockito.when(mailInfoExtractor.setRequest(request)).thenReturn(true);
         Mockito.when(request.getRequestURI()).thenReturn("test");
         Mockito.when(mailInfoExtractor.getFrom()).thenReturn(mockSet);

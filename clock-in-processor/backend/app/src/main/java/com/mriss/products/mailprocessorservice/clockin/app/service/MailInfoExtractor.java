@@ -35,8 +35,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.RequestScope;
 
-@Service
-@RequestScope
 public class MailInfoExtractor {
 
     public static final String MIME_MESSAGE_ATTRIBUTE = "mimeMessage";

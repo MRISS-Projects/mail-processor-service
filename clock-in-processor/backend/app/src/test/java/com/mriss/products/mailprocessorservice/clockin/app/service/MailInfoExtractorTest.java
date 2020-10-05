@@ -48,7 +48,7 @@ import org.springframework.mock.web.MockHttpServletRequest;
 public class MailInfoExtractorTest {
 
     @Autowired
-    MailInfoExtractor extractor;
+    MailInfoExtractorFactory extractorFactory;
 
     private MimeMessage message;
 
@@ -66,6 +66,7 @@ public class MailInfoExtractorTest {
 
     @Test
     public void testGetFrom() throws MessagingException, FileNotFoundException {
+        MailInfoExtractor extractor = extractorFactory.getExtractor();
         extractor.setRequest(request);
         Set<String> from = extractor.getFrom();
         assertNotNull(from);
@@ -74,6 +75,7 @@ public class MailInfoExtractorTest {
 
     @Test
     public void testGetFromException() throws MessagingException, FileNotFoundException {
+        MailInfoExtractor extractor = extractorFactory.getExtractor();
         HttpServletRequest mockRequest = Mockito.mock(HttpServletRequest.class);
         MimeMessage mockMessage = Mockito.mock(MimeMessage.class);
         Mockito.when(mockRequest.getAttribute(Mockito.anyString())).thenReturn(mockMessage);
@@ -85,12 +87,14 @@ public class MailInfoExtractorTest {
 
     @Test
     public void testGetFromNull() throws MessagingException, FileNotFoundException {
+        MailInfoExtractor extractor = extractorFactory.getExtractor();
         Set<String> from = extractor.getFrom();
         assertNull(from);
     }
 
     @Test
     public void testGetContent() throws MessagingException, IOException {
+        MailInfoExtractor extractor = extractorFactory.getExtractor();
         MimeMessage messageSpy = Mockito.spy(message);
         HttpServletRequest requestSpy = Mockito.spy(request);
         Mockito.when(requestSpy.getAttribute(MailInfoExtractor.MIME_MESSAGE_ATTRIBUTE)).thenReturn(messageSpy);
@@ -108,6 +112,7 @@ public class MailInfoExtractorTest {
 
     @Test
     public void testGetContentException() throws MessagingException, IOException {
+        MailInfoExtractor extractor = extractorFactory.getExtractor();
         MimeMessage messageSpy = Mockito.mock(MimeMessage.class);
         HttpServletRequest requestSpy = Mockito.mock(HttpServletRequest.class);
         Mockito.when(requestSpy.getAttribute(MailInfoExtractor.MIME_MESSAGE_ATTRIBUTE)).thenReturn(messageSpy);
@@ -118,6 +123,7 @@ public class MailInfoExtractorTest {
 
     @Test
     public void testGetContentTypeException() throws MessagingException, IOException {
+        MailInfoExtractor extractor = extractorFactory.getExtractor();
         MimeMessage messageSpy = Mockito.spy(message);
         HttpServletRequest requestSpy = Mockito.spy(request);
         Mockito.when(requestSpy.getAttribute(MailInfoExtractor.MIME_MESSAGE_ATTRIBUTE)).thenReturn(messageSpy);
@@ -133,6 +139,7 @@ public class MailInfoExtractorTest {
 
     @Test
     public void testSetRequestException() throws MessagingException, IOException {
+        MailInfoExtractor extractor = extractorFactory.getExtractor();
         HttpServletRequest mockRequest = Mockito.mock(HttpServletRequest.class);
         Mockito.doThrow(IOException.class).when(mockRequest).getInputStream();
         assertFalse(extractor.setRequest(mockRequest));
@@ -140,6 +147,7 @@ public class MailInfoExtractorTest {
 
     @Test
     public void testSetRequestNoMessage() throws MessagingException, IOException {
+        MailInfoExtractor extractor = extractorFactory.getExtractor();
         HttpServletRequest mockRequest = Mockito.mock(HttpServletRequest.class);
         ServletInputStream mockedInputStream = Mockito.mock(ServletInputStream.class);
         Mockito.when(mockRequest.getAttribute(Mockito.anyString())).thenReturn(null);

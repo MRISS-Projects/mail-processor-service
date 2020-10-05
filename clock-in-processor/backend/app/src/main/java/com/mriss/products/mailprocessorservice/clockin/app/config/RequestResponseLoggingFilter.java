@@ -31,6 +31,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.mriss.products.mailprocessorservice.clockin.app.service.MailInfoExtractor;
+import com.mriss.products.mailprocessorservice.clockin.app.service.MailInfoExtractorFactory;
 import com.mriss.products.mailprocessorservice.clockin.app.service.Validator;
 
 /**
@@ -48,13 +49,14 @@ public class RequestResponseLoggingFilter implements Filter {
     Validator validator;
 
     @Autowired
-    MailInfoExtractor mailInfoExtractor;
+    MailInfoExtractorFactory mailInfoExtractorFactory;
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
         LOGGER.info("Entering filter...");
         HttpServletRequest req = (HttpServletRequest) request;
+        MailInfoExtractor mailInfoExtractor = mailInfoExtractorFactory.getExtractor();
         if (mailInfoExtractor.setRequest(req)) {
             LOGGER.info("Logging Request  {} : {}", req.getMethod(), req.getRequestURI());
             if (validator.validate(req.getRequestURI(), mailInfoExtractor.getFrom())) {
