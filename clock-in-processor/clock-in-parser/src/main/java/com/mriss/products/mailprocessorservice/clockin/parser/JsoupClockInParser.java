@@ -100,4 +100,8 @@ public class JsoupClockInParser implements MailContentParser<List<Element>> {
         return elements.size();
     }
 
+    public List<Element> getElements() {
+        return elements;
+    }
+
 }

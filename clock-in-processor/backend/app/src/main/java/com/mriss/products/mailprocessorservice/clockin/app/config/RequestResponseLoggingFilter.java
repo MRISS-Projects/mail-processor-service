@@ -17,7 +17,6 @@ package com.mriss.products.mailprocessorservice.clockin.app.config;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -27,17 +26,16 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 
-import org.jsoup.nodes.Element;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.mriss.products.mailprocessorservice.api.MailContentParser;
+import com.mriss.products.mailprocessorservice.api.dto.ClockinRecordDto;
 import com.mriss.products.mailprocessorservice.clockin.app.service.ClockinMailParserFactory;
 import com.mriss.products.mailprocessorservice.clockin.app.service.MailInfoExtractor;
 import com.mriss.products.mailprocessorservice.clockin.app.service.MailInfoExtractorFactory;
 import com.mriss.products.mailprocessorservice.clockin.app.service.Validator;
-import com.mriss.products.mailprocessorservice.clockin.parser.JsoupClockInParser;
 
 /**
  * Filter.
@@ -87,6 +85,8 @@ public class RequestResponseLoggingFilter implements Filter {
         MailContentParser<?> parser = clockinMailParserFactory.getNewMailParser();
         parser.parse(content);
         LOGGER.info("Parsed elements: " + parser.getParsedElementsSize());
+        ClockinRecordDto dto = clockinMailParserFactory.getRecordsFromContent(parser);
+        LOGGER.info("Dto: " + dto);
         LOGGER.info("Success processing message!!!");
         return true;
     }

@@ -1,9 +1,12 @@
 package com.mriss.products.mailprocessorservice.clockin.app.service;
 
 import com.mriss.products.mailprocessorservice.api.MailContentParser;
+import com.mriss.products.mailprocessorservice.api.dto.ClockinRecordDto;
 
-public interface ClockinMailParserFactory {
+public interface ClockinMailParserFactory<T extends MailContentParser<?>> {
 
-    public MailContentParser<?> getNewMailParser();
+    public T getNewMailParser();
+
+    public ClockinRecordDto getRecordsFromContent(T parser);
 
 }
