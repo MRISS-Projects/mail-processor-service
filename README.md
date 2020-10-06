@@ -1,10 +1,10 @@
 # Mail Processor Service
 
-[![Build Status](https://34.70.246.135/jenkins/buildStatus/icon?job=MailProcessingService-Snapshot)](https://34.70.246.135/jenkins/job/MailProcessingService-Snapshot/)
+![GitHub](https://img.shields.io/github/license/MRISS-Projects/mail-processor-service?color=blue&label=License) [![Build Status](https://34.70.246.135/jenkins/buildStatus/icon?job=MailProcessingService-Snapshot)](https://34.70.246.135/jenkins/job/MailProcessingService-Snapshot/)
 
 ## Version
 
-0.3.0-SNAPSHOT - 128 - 20201002-192024
+0.3.0-SNAPSHOT - 129 - 20201006-005943
 
 ## Code Based Site
 
@@ -15,6 +15,13 @@ RCs: https://mriss-projects.github.io/mail-processor-service/rcs/products/mail-p
 Release: https://mriss-projects.github.io/mail-processor-service/releases/products/mail-processor-service
 
 ## Release Notes
+
+### Version 0.3.0-SNAPSHOT
+
+| # | Type | Summary | Assignee | Reporter | Updated |
+| - | ---- | ------- | -------- | -------- | ------- |
+| [11](https://github.com/MRISS-Projects/mail-processor-service/issues/11) | task | Add build status badges | mriss | mriss | 10/5/20 |
+| [10](https://github.com/MRISS-Projects/mail-processor-service/issues/10) | task | Upgrade changes plugin to 2.12.6 | mriss | mriss | 10/5/20 |
 
 ### Version 0.2.0
 
