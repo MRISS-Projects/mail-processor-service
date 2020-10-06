@@ -15,6 +15,8 @@
  *******************************************************************************/
 package com.mriss.products.mailprocessorservice.clockin.app.config;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Set;
 
@@ -63,7 +65,7 @@ public class RequestResponseLoggingFilterTest {
         ServletResponse response = Mockito.mock(ServletResponse.class);
         FilterChain chain = Mockito.mock(FilterChain.class);
         Set<String> mockSet = Mockito.mock(Set.class);
-        InputStream mockStream = Mockito.mock(InputStream.class);
+        InputStream mockStream = new FileInputStream(new File("target/test-classes/test.txt"));
         MailInfoExtractor mailInfoExtractor = Mockito.mock(MailInfoExtractor.class);
         Mockito.when(mailInfoExtractorFactory.getExtractor()).thenReturn(mailInfoExtractor);
         Mockito.when(mailInfoExtractor.setRequest(request)).thenReturn(true);

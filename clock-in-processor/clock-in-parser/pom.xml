@@ -8,7 +8,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- The Basics -->
-    <groupId>com.mriss.mriss-parent.products.mail-processor-service.card-statement-processor</groupId>
+    <groupId>com.mriss.mriss-parent.products.mail-processor-service.clock-in-processor</groupId>
     <artifactId>clock-in-parser</artifactId>
     <version>0.3.0-SNAPSHOT</version>
     <packaging>jar</packaging>

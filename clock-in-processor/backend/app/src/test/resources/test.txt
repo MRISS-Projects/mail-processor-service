@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=3D"utf-8"/>
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Type=
+'/>
+  </head>
+  <body style=3D"background-color: #F0F0F0; margin: 0;">
+    <div style=3D"background-color: #F0F0F0; padding: 15px;">
+      <table style=3D"width: 100%; max-width: 600px; background-color: #FFF=
+FFF; border: none; margin: 0 auto; padding: 0; color: #666666; font-family:=
+ 'Helvetica', 'Arial', sans-serif;" cellspacing=3D"0">
+        <tbody>
+          <tr>
+            <td style=3D"padding: 7px 5px 5px 5px; text-align: right; backg=
+round-repeat: no-repeat; background-position: center; background-color: #2D=
+878C; background-image: url('http://api.web.com.br/images/mailer/g=
+ranulado.png');" background=3D"http://api.web.com.br/images/mailer=
+/granulado.png">
+              <a href=3D"https://www.facebook.com/web" style=3D"ma=
+rgin-right: 5px;"><img src=3D"http://api.web.com.br/images/mailer/=
+facebook.png" /></a>
+              <a href=3D"https://plus.google.com/u/0/108846468602979680116/=
+about" style=3D"margin-right: 5px;"><img src=3D"http://api.web.com=
+.br/images/mailer/googleplus.png" /></a>
+              <a href=3D"https://www.linkedin.com/company/"><img s=
+rc=3D"http://api.web.com.br/images/mailer/linkedin.png" /></a>
+            </td>
+          </tr>
+          <tr>
+            <td style=3D"padding: 20px; text-align: center;">
+              <p>
+                <a href=3D"http://www.web.com.br">
+                  <img src=3D"http://api.web.com.br/images/mailer/=
+logo.png" />
+                </a>
+              </p>
+              <h2 style=3D"font-weight: bold">Extrato de pontos</h2>
+<h3>Colaborador: Marcelo Riss</h3>
+<br/>
+
+  <p>Jornada: 05/10/2020</p>
+
+  <table style=3D"text-align: left; border: solid 1.5px #F0F0F0; border-spa=
+cing: 0; width: 100%;">
+    <thead>
+      <tr>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"N=C3=BAmero do recibo">
+          N=C2=BA Recibo
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Hor=C3=A1rio do registro do ponto">
+          Hor=C3=A1rio
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Hor=C3=A1rio local do usu=C3=A1rio no momen=
+to do registro">
+          Hor=C3=A1rio local
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Ender=C3=A7eo original informado pelo GPS d=
+o usu=C3=A1rio">
+          Endere=C3=A7o original
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Endere=C3=A7o editado pelo usu=C3=A1rio">
+          Endere=C3=A7o editado
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Endere=C3=A7o de IP que enviou o registro d=
+e ponto">
+          IP
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Tipo de registro de ponto">
+          Tipo
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              00271698157
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"05/10/2020 09:09">
+              09:09
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"">
+             =20
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+                <a href=3D"http://www.google.com/maps/preview/?q=3DR.+Eucl=
+=C3=ADdes+da+Cunha,+1617+-+102,+Pres.+Joao+Goulart,+Santa+Maria-RS" style=
+=3D"white-space: nowrap;">
+                  R. Eucl=C3=ADdes da Cunha, 1617 ...
+                </a>
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              177.18.55.163
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"Registro original">
+              O
+            </td>
+          </tr>
+          <tr>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              00271910855
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"05/10/2020 13:28">
+              13:28
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"">
+             =20
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+                <a href=3D"http://www.google.com/maps/preview/?q=3DR.+Eucl=
+=C3=ADdes+da+Cunha,+1617+-+102,+Pres.+Joao+Goulart,+Santa+Maria-RS" style=
+=3D"white-space: nowrap;">
+                  R. Eucl=C3=ADdes da Cunha, 1617 ...
+                </a>
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              177.18.55.163
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"Registro original">
+              O
+            </td>
+          </tr>
+          <tr>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              00272001398
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"05/10/2020 14:48">
+              14:48
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"">
+             =20
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+                <a href=3D"http://www.google.com/maps/preview/?q=3DR.+Eucl=
+=C3=ADdes+da+Cunha,+1617+-+102,+Pres.+Joao+Goulart,+Santa+Maria-RS" style=
+=3D"white-space: nowrap;">
+                  R. Eucl=C3=ADdes da Cunha, 1617 ...
+                </a>
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              177.18.55.163
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"Registro original">
+              O
+            </td>
+          </tr>
+          <tr>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              00272198321
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"05/10/2020 18:54">
+              18:54
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"">
+             =20
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+                <a href=3D"http://www.google.com/maps/preview/?q=3DR.+Eucl=
+=C3=ADdes+da+Cunha,+1617+-+102,+Pres.+Joao+Goulart,+Santa+Maria-RS" style=
+=3D"white-space: nowrap;">
+                  R. Eucl=C3=ADdes da Cunha, 1617 ...
+                </a>
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              187.113.223.21
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"Registro original">
+              O
+            </td>
+          </tr>
+    </tbody>
+  </table>
+  <p>Jornada: 02/10/2020</p>
+
+  <table style=3D"text-align: left; border: solid 1.5px #F0F0F0; border-spa=
+cing: 0; width: 100%;">
+    <thead>
+      <tr>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"N=C3=BAmero do recibo">
+          N=C2=BA Recibo
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Hor=C3=A1rio do registro do ponto">
+          Hor=C3=A1rio
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Hor=C3=A1rio local do usu=C3=A1rio no momen=
+to do registro">
+          Hor=C3=A1rio local
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Ender=C3=A7eo original informado pelo GPS d=
+o usu=C3=A1rio">
+          Endere=C3=A7o original
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Endere=C3=A7o editado pelo usu=C3=A1rio">
+          Endere=C3=A7o editado
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Endere=C3=A7o de IP que enviou o registro d=
+e ponto">
+          IP
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Tipo de registro de ponto">
+          Tipo
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              00270660496
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"02/10/2020 09:45">
+              09:45
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"">
+             =20
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+                <a href=3D"http://www.google.com/maps/preview/?q=3DR.+Eucl=
+=C3=ADdes+da+Cunha,+1617+-+102,+Pres.+Joao+Goulart,+Santa+Maria-RS" style=
+=3D"white-space: nowrap;">
+                  R. Eucl=C3=ADdes da Cunha, 1617 ...
+                </a>
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              177.18.55.163
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"Registro original">
+              O
+            </td>
+          </tr>
+          <tr>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              00270798713
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"02/10/2020 12:46">
+              12:46
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"">
+             =20
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+                <a href=3D"http://www.google.com/maps/preview/?q=3DR.+Eucl=
+=C3=ADdes+da+Cunha,+1617+-+102,+Pres.+Joao+Goulart,+Santa+Maria-RS" style=
+=3D"white-space: nowrap;">
+                  R. Eucl=C3=ADdes da Cunha, 1617 ...
+                </a>
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              177.18.55.163
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"Registro original">
+              O
+            </td>
+          </tr>
+          <tr>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              00270930571
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"02/10/2020 14:13">
+              14:13
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"">
+             =20
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+                <a href=3D"http://www.google.com/maps/preview/?q=3DR.+Eucl=
+=C3=ADdes+da+Cunha,+1617+-+102,+Pres.+Joao+Goulart,+Santa+Maria-RS" style=
+=3D"white-space: nowrap;">
+                  R. Eucl=C3=ADdes da Cunha, 1617 ...
+                </a>
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              177.18.55.163
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"Registro original">
+              O
+            </td>
+          </tr>
+          <tr>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+             =20
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"02/10/2020 19:15">
+              19:15
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"">
+             =20
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"">
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"">
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+             =20
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"Registro inclu=C3=ADdo manualmente: Aju=
+ste">
+              I
+            </td>
+          </tr>
+    </tbody>
+  </table>
+  <p>Jornada: 01/10/2020</p>
+
+  <table style=3D"text-align: left; border: solid 1.5px #F0F0F0; border-spa=
+cing: 0; width: 100%;">
+    <thead>
+      <tr>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"N=C3=BAmero do recibo">
+          N=C2=BA Recibo
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Hor=C3=A1rio do registro do ponto">
+          Hor=C3=A1rio
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Hor=C3=A1rio local do usu=C3=A1rio no momen=
+to do registro">
+          Hor=C3=A1rio local
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Ender=C3=A7eo original informado pelo GPS d=
+o usu=C3=A1rio">
+          Endere=C3=A7o original
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Endere=C3=A7o editado pelo usu=C3=A1rio">
+          Endere=C3=A7o editado
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Endere=C3=A7o de IP que enviou o registro d=
+e ponto">
+          IP
+        </th>
+        <th style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: #444=
+444; font-size: 12px;" title=3D"Tipo de registro de ponto">
+          Tipo
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              00269896818
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"01/10/2020 09:10">
+              09:10
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"">
+             =20
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+                <a href=3D"http://www.google.com/maps/preview/?q=3DR.+Eucl=
+=C3=ADdes+da+Cunha,+1617+-+102,+Pres.+Joao+Goulart,+Santa+Maria-RS" style=
+=3D"white-space: nowrap;">
+                  R. Eucl=C3=ADdes da Cunha, 1617 ...
+                </a>
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              187.113.223.10
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"Registro original">
+              O
+            </td>
+          </tr>
+          <tr>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              00270062202
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"01/10/2020 12:51">
+              12:51
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"">
+             =20
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+                <a href=3D"http://www.google.com/maps/preview/?q=3DR.+Eucl=
+=C3=ADdes+da+Cunha,+1617+-+102,+Pres.+Joao+Goulart,+Santa+Maria-RS" style=
+=3D"white-space: nowrap;">
+                  R. Eucl=C3=ADdes da Cunha, 1617 ...
+                </a>
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              177.79.7.62
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"Registro original">
+              O
+            </td>
+          </tr>
+          <tr>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              00270192447
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"01/10/2020 14:16">
+              14:16
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"">
+             =20
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+                <a href=3D"http://www.google.com/maps/preview/?q=3DR.+Eucl=
+=C3=ADdes+da+Cunha,+1617+-+102,+Pres.+Joao+Goulart,+Santa+Maria-RS" style=
+=3D"white-space: nowrap;">
+                  R. Eucl=C3=ADdes da Cunha, 1617 ...
+                </a>
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              177.79.76.235
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"Registro original">
+              O
+            </td>
+          </tr>
+          <tr>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              00270405304
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"01/10/2020 18:39">
+              18:39
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"">
+             =20
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+                <a href=3D"http://www.google.com/maps/preview/?q=3DR.+Eucl=
+=C3=ADdes+da+Cunha,+1617+-+102,+Pres.+Joao+Goulart,+Santa+Maria-RS" style=
+=3D"white-space: nowrap;">
+                  R. Eucl=C3=ADdes da Cunha, 1617 ...
+                </a>
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"R. Eucl=C3=ADdes da Cunha, 1617 - 102, =
+Pres. Joao Goulart, Santa Maria-RS">
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;">
+              177.18.55.163
+            </td>
+            <td style=3D"border: solid 1.5px #F0F0F0; padding: 5px; color: =
+#444444; font-size: 12px;" title=3D"Registro original">
+              O
+            </td>
+          </tr>
+    </tbody>
+  </table>
+
+            </td>
+          </tr>
+          <tr><td style=3D"height: 5px; background-repeat: no-repeat; backg=
+round-position: center; background-color: #2D878C; background-image: url('h=
+ttp://api.web.com.br/images/mailer/granulado.png');" background=3D=
+"http://api.web.com.br/images/mailer/granulado.png"></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
