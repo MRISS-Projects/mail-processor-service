@@ -8,6 +8,10 @@ public class ClockinEntry {
     private String date;
     private List<SingleRecord> records = new ArrayList<SingleRecord>();
 
+    public ClockinEntry() {
+        super();
+    }
+
     public String getDate() {
         return date;
     }

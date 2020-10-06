@@ -8,6 +8,10 @@ public class ClockinRecordDto {
     private String user;
     private List<ClockinEntry> entries = new ArrayList<ClockinEntry>();
 
+    public ClockinRecordDto() {
+        super();
+    }
+
     public String getUser() {
         return user;
     }

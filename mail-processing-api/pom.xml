@@ -21,8 +21,12 @@
     <artifactId>mail-processing-api</artifactId>
     <version>0.3.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <!-- <dependencies> -->
-    <!-- </dependencies> -->
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+    </dependencies>
     <parent>
         <groupId>com.mriss.mriss-parent.products</groupId>
         <artifactId>mail-processor-service</artifactId>
