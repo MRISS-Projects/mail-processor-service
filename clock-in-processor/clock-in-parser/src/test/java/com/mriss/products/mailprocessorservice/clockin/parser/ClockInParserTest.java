@@ -20,7 +20,7 @@ public class ClockInParserTest {
 
     @Test
     public void testParser() throws FileNotFoundException {
-        ClockInParser parser = new ClockInParser();
+        JsoupClockInParser parser = new JsoupClockInParser();
         List<Element> parsingResult = parser.parse(new FileInputStream(new File("target/test-classes/test.txt")));
         assertNotNull(parsingResult);
         assertTrue(parsingResult.size() > 0);

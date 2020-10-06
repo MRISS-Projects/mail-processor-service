@@ -18,9 +18,9 @@ import org.slf4j.LoggerFactory;
 
 import com.mriss.products.mailprocessorservice.api.MailContentParser;
 
-public class ClockInParser implements MailContentParser<List<Element>> {
+public class JsoupClockInParser implements MailContentParser<List<Element>> {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ClockInParser.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(JsoupClockInParser.class);
 
     public static final String DATE_MARKER = "Jornada:";
     public static final String USER_MARKER = "Colaborador:";

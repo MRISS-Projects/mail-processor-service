@@ -35,7 +35,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.mriss.products.mailprocessorservice.clockin.app.service.MailInfoExtractor;
 import com.mriss.products.mailprocessorservice.clockin.app.service.MailInfoExtractorFactory;
 import com.mriss.products.mailprocessorservice.clockin.app.service.Validator;
-import com.mriss.products.mailprocessorservice.clockin.parser.ClockInParser;
+import com.mriss.products.mailprocessorservice.clockin.parser.JsoupClockInParser;
 
 /**
  * Filter.
@@ -79,7 +79,7 @@ public class RequestResponseLoggingFilter implements Filter {
         if (content == null) {
             return false;
         }
-        ClockInParser parser = new ClockInParser();
+        JsoupClockInParser parser = new JsoupClockInParser();
         List<Element> elements = parser.parse(content);
         LOGGER.info("Parsed elements: " + elements.size());
         LOGGER.info("Success processing message!!!");
