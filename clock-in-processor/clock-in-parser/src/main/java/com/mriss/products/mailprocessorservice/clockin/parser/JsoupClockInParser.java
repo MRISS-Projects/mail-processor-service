@@ -25,45 +25,48 @@ public class JsoupClockInParser implements MailContentParser<List<Element>> {
     public static final String DATE_MARKER = "Jornada:";
     public static final String USER_MARKER = "Colaborador:";
 
+    private List<Element> elements = new ArrayList<Element>();
+
     @Override
     public List<Element> parse(InputStream contentSource) {
-        String cleanSource = getCleanSource(contentSource);
-        LOGGER.debug("cleanSource: " + cleanSource);
-        List<Element> result = new ArrayList<Element>();
-        if (cleanSource != null) {
-            Document doc = Jsoup.parse(cleanSource);
-            doc.filter(new NodeFilter() {
+        if (elements.isEmpty()) {
+            String cleanSource = getCleanSource(contentSource);
+            LOGGER.debug("cleanSource: " + cleanSource);
+            if (cleanSource != null) {
+                Document doc = Jsoup.parse(cleanSource);
+                doc.filter(new NodeFilter() {
 
-                @Override
-                public FilterResult head(Node node, int depth) {
-                    if (node instanceof Element) {
-                        Element el = (Element) node;
-                        if (el.tag() == Tag.valueOf("h3")) {
-                            if (el.ownText().indexOf(USER_MARKER) != -1) {
-                                result.add(el);
-                            }
-                        } else if (el.tag() == Tag.valueOf("p")) {
-                            if (el.ownText().indexOf(DATE_MARKER) != -1) {
-                                result.add(el);
-                            }
-                        } else if (el.tag() == Tag.valueOf("table")) {
-                            if (el.parent().tag() == Tag.valueOf("td")) {
-                                result.add(el);
-                                return FilterResult.SKIP_ENTIRELY;
+                    @Override
+                    public FilterResult head(Node node, int depth) {
+                        if (node instanceof Element) {
+                            Element el = (Element) node;
+                            if (el.tag() == Tag.valueOf("h3")) {
+                                if (el.ownText().indexOf(USER_MARKER) != -1) {
+                                    elements.add(el);
+                                }
+                            } else if (el.tag() == Tag.valueOf("p")) {
+                                if (el.ownText().indexOf(DATE_MARKER) != -1) {
+                                    elements.add(el);
+                                }
+                            } else if (el.tag() == Tag.valueOf("table")) {
+                                if (el.parent().tag() == Tag.valueOf("td")) {
+                                    elements.add(el);
+                                    return FilterResult.SKIP_ENTIRELY;
+                                }
                             }
                         }
+                        return FilterResult.CONTINUE;
                     }
-                    return FilterResult.CONTINUE;
-                }
 
-                @Override
-                public FilterResult tail(Node node, int depth) {
-                    return FilterResult.CONTINUE;
-                }
+                    @Override
+                    public FilterResult tail(Node node, int depth) {
+                        return FilterResult.CONTINUE;
+                    }
 
-            });
+                });
+            }
         }
-        return result;
+        return elements;
     }
 
     private String getCleanSource(InputStream contentSource) {
@@ -90,6 +93,11 @@ public class JsoupClockInParser implements MailContentParser<List<Element>> {
             LOGGER.error(e.getMessage(), e);
             return null;
         }
+    }
+
+    @Override
+    public int getParsedElementsSize() {
+        return elements.size();
     }
 
 }

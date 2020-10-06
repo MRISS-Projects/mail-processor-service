@@ -32,9 +32,12 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
+import com.mriss.products.mailprocessorservice.api.MailContentParser;
+import com.mriss.products.mailprocessorservice.clockin.app.service.ClockinMailParserFactory;
 import com.mriss.products.mailprocessorservice.clockin.app.service.MailInfoExtractor;
 import com.mriss.products.mailprocessorservice.clockin.app.service.MailInfoExtractorFactory;
 import com.mriss.products.mailprocessorservice.clockin.app.service.Validator;
+import com.mriss.products.mailprocessorservice.clockin.parser.JsoupClockInParser;
 
 public class RequestResponseLoggingFilterTest {
 
@@ -43,6 +46,9 @@ public class RequestResponseLoggingFilterTest {
 
     @Mock
     MailInfoExtractorFactory mailInfoExtractorFactory;
+
+    @Mock
+    ClockinMailParserFactory clockinMailParserFactory;
 
     @InjectMocks
     RequestResponseLoggingFilter filter = new RequestResponseLoggingFilter();
@@ -67,7 +73,9 @@ public class RequestResponseLoggingFilterTest {
         Set<String> mockSet = Mockito.mock(Set.class);
         InputStream mockStream = new FileInputStream(new File("target/test-classes/test.txt"));
         MailInfoExtractor mailInfoExtractor = Mockito.mock(MailInfoExtractor.class);
+        MailContentParser contentParser = Mockito.spy(new JsoupClockInParser());
         Mockito.when(mailInfoExtractorFactory.getExtractor()).thenReturn(mailInfoExtractor);
+        Mockito.when(clockinMailParserFactory.getNewMailParser()).thenReturn(contentParser);
         Mockito.when(mailInfoExtractor.setRequest(request)).thenReturn(true);
         Mockito.when(request.getRequestURI()).thenReturn("test");
         Mockito.when(mailInfoExtractor.getFrom()).thenReturn(mockSet);

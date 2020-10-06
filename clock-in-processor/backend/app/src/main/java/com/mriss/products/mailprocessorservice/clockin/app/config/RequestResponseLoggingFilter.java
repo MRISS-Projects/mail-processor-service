@@ -32,6 +32,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.mriss.products.mailprocessorservice.api.MailContentParser;
+import com.mriss.products.mailprocessorservice.clockin.app.service.ClockinMailParserFactory;
 import com.mriss.products.mailprocessorservice.clockin.app.service.MailInfoExtractor;
 import com.mriss.products.mailprocessorservice.clockin.app.service.MailInfoExtractorFactory;
 import com.mriss.products.mailprocessorservice.clockin.app.service.Validator;
@@ -53,6 +55,9 @@ public class RequestResponseLoggingFilter implements Filter {
 
     @Autowired
     MailInfoExtractorFactory mailInfoExtractorFactory;
+
+    @Autowired
+    ClockinMailParserFactory clockinMailParserFactory;
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
@@ -79,9 +84,9 @@ public class RequestResponseLoggingFilter implements Filter {
         if (content == null) {
             return false;
         }
-        JsoupClockInParser parser = new JsoupClockInParser();
-        List<Element> elements = parser.parse(content);
-        LOGGER.info("Parsed elements: " + elements.size());
+        MailContentParser<?> parser = clockinMailParserFactory.getNewMailParser();
+        parser.parse(content);
+        LOGGER.info("Parsed elements: " + parser.getParsedElementsSize());
         LOGGER.info("Success processing message!!!");
         return true;
     }

@@ -6,4 +6,6 @@ public interface MailContentParser<T> {
 
     public T parse(InputStream contentSource);
 
+    public int getParsedElementsSize();
+
 }
