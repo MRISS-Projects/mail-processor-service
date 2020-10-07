@@ -4,7 +4,7 @@
 
 ## Version
 
-0.3.0-SNAPSHOT - 131 - 20201006-215632
+0.3.0-SNAPSHOT - RC16 - 20201007-152230
 
 ## Code Based Site
 
@@ -20,6 +20,7 @@ Release: https://mriss-projects.github.io/mail-processor-service/releases/produc
 
 | # | Type | Summary | Assignee | Reporter | Updated |
 | - | ---- | ------- | -------- | -------- | ------- |
+| [12](https://github.com/MRISS-Projects/mail-processor-service/issues/12) | task | Implement standard HTML parser structure to convert HTML to objects. | mriss | mriss | 10/7/20 |
 | [11](https://github.com/MRISS-Projects/mail-processor-service/issues/11) | task | Add build status badges | mriss | mriss | 10/5/20 |
 | [10](https://github.com/MRISS-Projects/mail-processor-service/issues/10) | task | Upgrade changes plugin to 2.12.6 | mriss | mriss | 10/5/20 |
 
