@@ -131,7 +131,7 @@
         <connection>scm:git:${source.code.server}/${source.project}.git</connection>
         <developerConnection>scm:git:${source.code.server}/${source.project}.git</developerConnection>
         <url>${source.code.server}/${source.project}/tree/master</url>
-        <tag>HEAD</tag>
+        <tag>staging-0.3.0-SNAPSHOT-RC</tag>
     </scm>
     <!-- <prerequisites> -->
     <!-- </prerequisites> -->
