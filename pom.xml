@@ -19,7 +19,7 @@
     <!-- The Basics -->
     <groupId>com.mriss.mriss-parent.products</groupId>
     <artifactId>mail-processor-service</artifactId>
-    <version>0.3.0-SNAPSHOT</version>
+    <version>0.4.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <!-- <dependencies> -->
     <!-- </dependencies> -->
@@ -33,7 +33,7 @@
             <dependency>
                 <groupId>com.mriss.mriss-parent.products.mail-processor-service</groupId>
                 <artifactId>mail-processing-api</artifactId>
-                <version>${project.version}</version>
+                <version>0.3.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -131,7 +131,7 @@
         <connection>scm:git:${source.code.server}/${source.project}.git</connection>
         <developerConnection>scm:git:${source.code.server}/${source.project}.git</developerConnection>
         <url>${source.code.server}/${source.project}/tree/master</url>
-        <tag>staging-0.3.0-SNAPSHOT-RC</tag>
+        <tag>HEAD</tag>
     </scm>
     <!-- <prerequisites> -->
     <!-- </prerequisites> -->
