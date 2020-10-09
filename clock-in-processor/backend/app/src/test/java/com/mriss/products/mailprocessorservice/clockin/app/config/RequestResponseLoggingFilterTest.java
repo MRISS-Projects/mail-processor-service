@@ -79,6 +79,7 @@ public class RequestResponseLoggingFilterTest {
         Mockito.when(mailInfoExtractor.setRequest(request)).thenReturn(true);
         Mockito.when(request.getRequestURI()).thenReturn("test");
         Mockito.when(mailInfoExtractor.getFrom()).thenReturn(mockSet);
+        Mockito.when(mailInfoExtractor.getSender()).thenReturn("test@test.com");
         Mockito.when(validator.validate("test", mockSet)).thenReturn(true);
         Mockito.when(mailInfoExtractor.getContent()).thenReturn(mockStream);
         filter.doFilter(request, response, chain);

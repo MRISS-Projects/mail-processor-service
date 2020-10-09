@@ -30,12 +30,14 @@ public class ClockinRecordDtoTest {
         assertNotNull(dto);
         dto.setUser("test");
         assertEquals("test", dto.getUser());
+        dto.setUserEmail("test@test.com");
+        assertEquals("test@test.com", dto.getUserEmail());
         ArrayList<ClockinEntry> entries = new ArrayList<ClockinEntry>();
-        dto.setEtries(entries);
-        assertEquals(entries, dto.getEtries());
+        dto.setEntries(entries);
+        assertEquals(entries, dto.getEntries());
         ClockinEntry entry = new ClockinEntry();
         dto.addEntry(entry);
-        assertEquals(1, dto.getEtries().size());
+        assertEquals(1, dto.getEntries().size());
         System.out.println(dto.toString());
     }
 

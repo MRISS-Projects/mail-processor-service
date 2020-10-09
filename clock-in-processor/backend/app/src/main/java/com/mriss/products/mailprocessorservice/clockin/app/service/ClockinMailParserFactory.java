@@ -22,6 +22,6 @@ public interface ClockinMailParserFactory<T extends MailContentParser<?>> {
 
     public T getNewMailParser();
 
-    public ClockinRecordDto getRecordsFromContent(T parser);
+    public ClockinRecordDto getRecordsFromContent(T parser, String sender);
 
 }

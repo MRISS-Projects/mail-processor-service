@@ -43,9 +43,9 @@ class JSoupParserFactoryTest {
     void testGetRecordsFromContent() throws FileNotFoundException {
         JsoupClockInParser parser = factory.getNewMailParser();
         parser.parse(new FileInputStream(new File("target/test-classes/test.txt")));
-        ClockinRecordDto dto = factory.getRecordsFromContent(parser);
+        ClockinRecordDto dto = factory.getRecordsFromContent(parser, "test@test.com");
         assertNotNull(dto);
-        assertEquals(3, dto.getEtries().size());
+        assertEquals(3, dto.getEntries().size());
         LOGGER.info("dto: " + dto);
     }
 

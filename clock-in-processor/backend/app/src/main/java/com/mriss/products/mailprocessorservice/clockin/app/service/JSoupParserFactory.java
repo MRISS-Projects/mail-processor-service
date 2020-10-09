@@ -37,19 +37,20 @@ public class JSoupParserFactory implements ClockinMailParserFactory<JsoupClockIn
     }
 
     @Override
-    public ClockinRecordDto getRecordsFromContent(JsoupClockInParser parser) {
+    public ClockinRecordDto getRecordsFromContent(JsoupClockInParser parser, String sender) {
         List<Element> elements = parser.getElements();
-        ClockinRecordDto dto = getDtoFromElements(elements);
+        ClockinRecordDto dto = getDtoFromElements(elements, sender);
         return dto;
     }
 
-    private ClockinRecordDto getDtoFromElements(List<Element> elements) {
+    private ClockinRecordDto getDtoFromElements(List<Element> elements, String sender) {
         ClockinRecordDto dto = new ClockinRecordDto();
         ClockinEntry entry = null;
         for (Iterator iterator = elements.iterator(); iterator.hasNext();) {
             Element element = (Element) iterator.next();
             if (element.tag() == Tag.valueOf("h3")) {
                 dto.setUser(parseUser(element.ownText()));
+                dto.setUserEmail(sender);
             } else if (element.tag() == Tag.valueOf("p")) {
                 entry = new ClockinEntry();
                 entry.setDate(parseDate(element.ownText()));

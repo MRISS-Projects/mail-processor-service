@@ -22,6 +22,7 @@ public class ClockinRecordDto {
 
     private String user;
     private List<ClockinEntry> entries = new ArrayList<ClockinEntry>();
+    private String userEmail;
 
     public ClockinRecordDto() {
         super();
@@ -35,11 +36,11 @@ public class ClockinRecordDto {
         this.user = user;
     }
 
-    public List<ClockinEntry> getEtries() {
+    public List<ClockinEntry> getEntries() {
         return entries;
     }
 
-    public void setEtries(List<ClockinEntry> etries) {
+    public void setEntries(List<ClockinEntry> etries) {
         this.entries = etries;
     }
 
@@ -47,9 +48,17 @@ public class ClockinRecordDto {
         this.entries.add(entry);
     }
 
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+
     @Override
     public String toString() {
-        return "ClockinRecordDto [user=" + user + ", entries=" + entries + "]";
+        return "ClockinRecordDto [user=" + user + ", userEmail=" + userEmail + ", entries=" + entries + "]";
     }
 
 }

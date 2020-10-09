@@ -117,4 +117,25 @@ public class MailInfoExtractor {
         }
     }
 
+    public String getSender() {
+        if (message != null) {
+            try {
+                if (message.getSender() != null) {
+                    return message.getSender().toString();
+                } else {
+                    Set<String> from = getFrom();
+                    if (from != null && !from.isEmpty()) {
+                        return from.iterator().next();
+                    } else {
+                        return null;
+                    }
+                } 
+            } catch (MessagingException e) {
+                LOGGER.error(e.getMessage(), e);
+                return null;
+            }
+        }
+        return null;
+    }
+
 }

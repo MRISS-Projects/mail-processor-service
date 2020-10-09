@@ -66,10 +66,10 @@ public class RequestResponseLoggingFilter implements Filter {
         if (mailInfoExtractor.setRequest(req)) {
             LOGGER.info("Logging Request  {} : {}", req.getMethod(), req.getRequestURI());
             if (validator.validate(req.getRequestURI(), mailInfoExtractor.getFrom())) {
-                if (processEmail(mailInfoExtractor.getContent())) {
+                if (processEmail(mailInfoExtractor.getContent(), mailInfoExtractor.getSender())) {
                     return;
                 } else {
-                    LOGGER.error("Invalid message processing!!!");
+                    LOGGER.error("Invalid message processing!!! No content or sender???");
                 }
             } else {
                 LOGGER.warn("Invalid message!!!");
@@ -78,14 +78,14 @@ public class RequestResponseLoggingFilter implements Filter {
         chain.doFilter(request, response);
     }
 
-    private boolean processEmail(InputStream content) {
-        if (content == null) {
+    private boolean processEmail(InputStream content, String sender) {
+        if (content == null || sender == null) {
             return false;
         }
         MailContentParser<?> parser = clockinMailParserFactory.getNewMailParser();
         parser.parse(content);
         LOGGER.info("Parsed elements: " + parser.getParsedElementsSize());
-        ClockinRecordDto dto = clockinMailParserFactory.getRecordsFromContent(parser);
+        ClockinRecordDto dto = clockinMailParserFactory.getRecordsFromContent(parser, sender);
         LOGGER.info("Dto: " + dto);
         LOGGER.info("Success processing message!!!");
         return true;

@@ -60,7 +60,9 @@ public class MailInfoExtractorTest {
         Properties props = new Properties();
         Session session = Session.getDefaultInstance(props, null);
         message = new MimeMessage(session, request.getInputStream());
-        message.addFrom(new Address[] {new InternetAddress("test@test.com")});
+        InternetAddress internetAddress = new InternetAddress("test@test.com");
+        message.addFrom(new Address[] {internetAddress});
+        message.setSender(internetAddress);
         request.setAttribute(MailInfoExtractor.MIME_MESSAGE_ATTRIBUTE, message);
     }
 
@@ -69,8 +71,35 @@ public class MailInfoExtractorTest {
         MailInfoExtractor extractor = extractorFactory.getExtractor();
         extractor.setRequest(request);
         Set<String> from = extractor.getFrom();
+        String sender = extractor.getSender();
         assertNotNull(from);
+        assertNotNull(sender);
         assertEquals("test@test.com", from.toArray()[0]);
+    }
+
+    @Test
+    public void testGetSender() throws MessagingException, FileNotFoundException {
+        message.setSender(null);
+        MailInfoExtractor extractor = extractorFactory.getExtractor();
+        extractor.setRequest(request);
+        Set<String> from = extractor.getFrom();
+        String sender = extractor.getSender();
+        assertNotNull(from);
+        assertNotNull(sender);
+        assertEquals("test@test.com", from.toArray()[0]);
+    }
+
+    @Test
+    public void testGetSenderException() throws MessagingException, FileNotFoundException {
+        message.setSender(null);
+        MailInfoExtractor extractor = extractorFactory.getExtractor();
+        HttpServletRequest mockRequest = Mockito.mock(HttpServletRequest.class);
+        MimeMessage mockMessage = Mockito.mock(MimeMessage.class);
+        Mockito.when(mockRequest.getAttribute(Mockito.anyString())).thenReturn(mockMessage);
+        Mockito.when(mockMessage.getSender()).thenThrow(MessagingException.class);
+        extractor.setRequest(mockRequest);
+        String sender= extractor.getSender();
+        assertNull(sender);
     }
 
     @Test
