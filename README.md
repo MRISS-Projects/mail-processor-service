@@ -4,7 +4,7 @@
 
 ## Version
 
-0.4.0-SNAPSHOT - 132 - 20201009-192330
+0.4.0-SNAPSHOT - 133 - 20201014-151340
 
 ## Code Based Site
 
@@ -15,6 +15,13 @@ RCs: https://mriss-projects.github.io/mail-processor-service/rcs/products/mail-p
 Release: https://mriss-projects.github.io/mail-processor-service/releases/products/mail-processor-service
 
 ## Release Notes
+
+### Version 0.4.0-SNAPSHOT
+
+| # | Type | Summary | Assignee | Reporter | Updated |
+| - | ---- | ------- | -------- | -------- | ------- |
+| [14](https://github.com/MRISS-Projects/mail-processor-service/issues/14) | task | Initialize spring boot application for clock in service. | mriss | mriss | 10/14/20 |
+| [13](https://github.com/MRISS-Projects/mail-processor-service/issues/13) | task | Add sender email at the original clock in data structure. | mriss | mriss | 10/9/20 |
 
 ### Version 0.3.0
 
