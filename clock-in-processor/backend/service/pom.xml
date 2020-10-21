@@ -37,6 +37,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
         </dependency>
     </dependencies>
     <parent>
@@ -49,8 +59,11 @@
     <!-- </dependencyManagement> -->
 <!--     <modules> -->
 <!--     </modules> -->
-<!--     <properties> -->
-<!--     </properties> -->
+    <properties>
+        <cloudrun.project.version>${parsedVersion.majorVersion}-${parsedVersion.minorVersion}-${parsedVersion.incrementalVersion}-b${jenkins.build.number}-${cloudrun.timestamp}</cloudrun.project.version>
+        <service.name>${project.artifactId}-dev</service.name>
+        <build.exec.command.argument>""${basedir}/build.sh ${cloudrun.project.version} ${service.name} ${google.appengine.project}""</build.exec.command.argument>
+    </properties>
 
     <!-- Build Settings -->
     <build>
@@ -67,6 +80,48 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>parse-version</id>
+                        <goals>
+                            <goal>parse-version</goal>
+                        </goals>
+                        <phase>initialize</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <configuration>
+                    <executable>/bin/bash</executable>
+                    <arguments>
+                        <argument>-c</argument>
+                        <argument>${build.exec.command.argument}</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>create-time-stamp</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>create-timestamp</goal>
+                        </goals>
+                        <inherited>false</inherited>
+                    </execution>
+                </executions>
+                <configuration>
+                    <timestampFormat>yyyyMMdd-HHmmss</timestampFormat>
+                    <timestampPropertyName>cloudrun.timestamp</timestampPropertyName>
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -106,6 +161,71 @@
 <!--     </pluginRepositories> -->
 <!--     <distributionManagement> -->
 <!--     </distributionManagement> -->
-<!--     <profiles> -->
-<!--     </profiles> -->
+    <profiles>
+        <profile>
+            <id>deployment</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>deploy-to-cloudrun</id>
+                                <phase>deploy</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>/bin/bash</executable>
+                                    <arguments>
+                                        <argument>-c</argument>
+                                        <argument>${build.exec.command.argument}</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>product-release-deployment</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <cloudrun.project.version>${parsedVersion.majorVersion}-${parsedVersion.minorVersion}-${parsedVersion.incrementalVersion}</cloudrun.project.version>
+                <service.name>${project.artifactId}</service.name>
+                <build.exec.command.argument>""${basedir}/build.sh ${cloudrun.project.version} ${service.name} ${google.appengine.project}""</build.exec.command.argument>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>deploy-to-cloudrun</id>
+                                <phase>deploy</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>/bin/bash</executable>
+                                    <arguments>
+                                        <argument>-c</argument>
+                                        <argument>${build.exec.command.argument}</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
