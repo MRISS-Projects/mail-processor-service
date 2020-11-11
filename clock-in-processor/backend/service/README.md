@@ -1,4 +1,4 @@
-# Mail Processor Service Backend Application
+# Mail Processor Service Backend Service
 
 ## Configuration for Command Line Deployment
 
